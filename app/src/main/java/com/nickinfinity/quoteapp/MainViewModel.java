@@ -47,17 +47,17 @@ public class MainViewModel extends ViewModel {
         return quoteList.get(index);
     }
 
-    public QuotesData nextQuote() {
+    public void nextQuote() {
         index = (index + 1) % quoteListSize;
-        return quoteList.get(index);
+
     }
-    public QuotesData previousQuote() {
-        index = index -1;
-        if(index ==-1)
-        {
-            index=0;
-            return quoteList.get(index);
+
+    public void previousQuote() {
+        index = index - 1;
+        if (index == -1) {
+            index = quoteListSize - 1;
+
         }
-        return quoteList.get(index);
+
     }
 }
