@@ -7,4 +7,7 @@ public class QuotesData {
     public String getQ() {
         return quote;
     }
+    public String getAuthor() {
+        return author;
+    }
 }

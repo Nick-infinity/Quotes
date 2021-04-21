@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     Button btn_next;
     Button btn_prev;
     MainViewModel mainViewModel;
+    TextView tv_author;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         tv = findViewById(R.id.tv_quote);
         btn_next = findViewById(R.id.btn_next);
         btn_prev = findViewById(R.id.btn_prev);
+        tv_author = findViewById(R.id.tv_author);
         setText();
 
         btn_next.setOnClickListener(new View.OnClickListener() {
@@ -48,5 +50,6 @@ public class MainActivity extends AppCompatActivity {
 
     public void setText() {
         tv.setText(mainViewModel.getQuote().getQ());
+        tv_author.setText("~ "+mainViewModel.getQuote().getAuthor());
     }
 }
